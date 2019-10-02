@@ -66,7 +66,7 @@ class GameFragment : Fragment() {
     }
 
     private fun onEndGame() {
-
+        gameFinished()
     }
 
     private fun gameFinished(){
