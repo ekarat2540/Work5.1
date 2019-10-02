@@ -33,7 +33,6 @@ import com.example.android.guesstheword.databinding.GameFragmentBinding
 class GameFragment : Fragment() {
 
 
-
     private lateinit var binding: GameFragmentBinding
 
     private lateinit var viewModel: GameViewModel
@@ -48,7 +47,7 @@ class GameFragment : Fragment() {
                 container,
                 false
         )
-        Log.i("GameFragment" , "Call ViewModelProviders.of")
+        Log.i("GameFragment", "Call ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
 
         viewModel.resetList()
@@ -87,7 +86,6 @@ class GameFragment : Fragment() {
     /**
      * Moves to the next word in the list
      */
-
 
 
     /** Methods for updating the UI **/
