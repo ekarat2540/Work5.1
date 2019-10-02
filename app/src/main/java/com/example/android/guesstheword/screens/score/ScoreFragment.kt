@@ -28,7 +28,7 @@ import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.ScoreFragmentBinding
 
 /**
- * Fragment where the final score is shown, after the game is over
+ * Fragment where the final _score is shown, after the game is over
  */
 class ScoreFragment : Fragment() {
     private lateinit var viewModel: ScoreViewModel

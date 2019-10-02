@@ -6,6 +6,6 @@ import androidx.lifecycle.ViewModel
 class ScoreViewModel(finalScore: Int) : ViewModel(){
     var score = finalScore
     init {
-        Log.i("ScoreViewModel","Final score is $finalScore")
+        Log.i("ScoreViewModel","Final _score is $finalScore")
     }
 }

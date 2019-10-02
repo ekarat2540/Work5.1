@@ -66,8 +66,11 @@ class GameFragment : Fragment() {
         viewModel.word.observe(this, Observer { newWorld->
             binding.wordText.text = newWorld
         })
-        updateScoreText()
-        updateWordText()
+//        updateScoreText()
+//        updateWordText()
+        viewModel.eventGameFinish.observe(this, Observer { hasFinish ->
+            if(hasFinish) gameFinished()
+        })
         return binding.root
 
     }
@@ -81,6 +84,7 @@ class GameFragment : Fragment() {
         val action = GameFragmentDirections.actionGameToScore()
         action.score = viewModel.score.value?:0
         NavHostFragment.findNavController(this).navigate(action)
+        viewModel.onGameFinishComplete()
     }
 
     private fun onSkip() {
@@ -104,7 +108,7 @@ class GameFragment : Fragment() {
 
 
     /**
-     * Moves to the next word in the list
+     * Moves to the next _word in the list
      */
 
 
